@@ -1,0 +1,680 @@
+:root{
+    --primary:#2d88ff;
+    --dark:#18191a;
+    --simidark:#242526;
+    --soft-dark:#3a3b3c;
+    --danger:#f82849;
+    --success:#44b960;
+    --warning:#dda728;
+    --text:#b7b9ab;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-color:var(--dark);
+   
+}
+/*-------------------- nav--------------------- */
+nav{
+    background-color: var(--simidark);
+    display: flex;
+    position: fixed; 
+    width: 100%;
+    z-index: 1;
+    
+
+}
+/*-------------------- left--------------------- */
+.left{
+    width: 25%;
+    
+}
+.left-text-box{
+    display:flex;
+    padding: 5px;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    
+}
+.search-box{
+    background-color: var(--soft-dark);
+    padding: 10px 15px;
+    display: flex;   
+    margin-left: 10px;
+    border-radius: 50px;
+    height: 40px;
+    
+}
+.search-box .feather-search{
+    margin-right: 10px;
+}
+.search-input{
+    background-color: var(--soft-dark);
+    border: none;
+    outline: none;
+    font-size: 15px;   
+}
+/*-------------------- center--------------------- */
+.center{
+    width: 50%;
+ 
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+
+}
+.center-link:hover{
+    background-color:var(--soft-dark);
+    border-radius: 10px;
+    color: white;
+   
+}
+.center-link{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    border-top:3px solid var(--simidark);
+    border-bottom:3px solid var(--simidark);
+    margin-top: 5px;
+    padding: 5px;
+    position: relative;
+    margin-left:5px;
+    margin-right: 5px;  
+    transition: 0.5s;
+    border-radius: 10px;
+
+}
+.center-link.active{
+    border-bottom-color:var(--primary) ;
+    border-radius: 0px;
+    
+}
+.center-link.active:hover{
+    background-color:var(--simidark);
+    border-radius: 0;
+}
+.center-icon{
+    font-size: 35px;
+}
+.center-link.active .center-icon{
+    color: var(--primary);
+   
+}
+.center-link .noti{
+    background-color: red;
+    width: 30px;
+    color: white;
+    position: absolute;
+    top:0px;
+    right: 20px;
+    border-radius: 10px;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+ 
+}
+/*-------------------- right--------------------- */
+.right{
+    width: 25%;
+}
+.right-box{
+ display: flex;
+
+}
+.profile{
+  
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: 5px;
+    padding: 5px 10px;
+    
+}
+.profile:hover{
+
+    background-color: var(--soft-dark);
+    border-radius: 20px;
+    
+    
+}
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top:5px;
+    
+}
+.profile-text{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(226, 219, 219);
+    margin-top:5px;
+}
+
+.noti-box{
+    display: flex;
+    margin-top: 5px;
+ 
+}
+.noti-box .noti:hover{
+    background-color: rgb(114, 113, 113);
+    
+}
+.noti-box .noti{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-dark);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+/*------------------------MyDay Section----------------------*/
+.fb-body{
+    display: flex;
+    
+}
+.left-side{
+    width: 25%;
+    margin-top:70px;
+    overflow-y:scroll;
+    height: 100vh;
+    
+}
+.left-side::-webkit-scrollbar{
+    width: 5px;
+}
+.left-side::-webkit-scrollbar-track{
+    border:3px solid #19191a;
+}
+.left-side::-webkit-scrollbar-thumb{
+   background-color:var(--soft-dark);
+   border: 1px solid var(--soft-dark);
+   border-radius: 10px;
+
+}
+.left-menu{
+   
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.image-menu{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.left-text{
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--text);
+}
+.left-icon{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    margin-right: 15px;
+   background-color: var(--soft-dark);
+   border-radius: 50%;
+}
+.left-menu:hover{
+    background-color: var(--soft-dark);
+}
+hr{
+    width: 80%;
+    height: 1px;
+    margin:10px 20px;
+    color: var(--soft-dark);
+    opacity: 0.4;
+    
+}
+.text{
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+/* ----------------------left--side-------------------- */
+.center-side{
+    width: 50%;
+    margin-top:80px;  
+    overflow-y:scroll;
+    height: 100vh;
+    height: 600px;  
+    
+}
+.center-side::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* ----------------------------My day------------------ */
+.myday-list{
+    
+  
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.myday:hover{
+    transform: scale(1.01);
+    filter:contrast(90%);
+}
+.myday{
+    margin-left: 10px;
+    width: 100px;
+    height: 200px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    transition: 0.3s;
+
+}
+.myday-item{
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: 2px;
+}
+.myday-owner{
+    width: 35px;
+    height: 35px; 
+    background-size:110%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  
+    
+}
+.my-day-text{
+    text-align: center;
+    /* position: absolute;
+    bottom: 10px;
+    left: 15px; */
+    color: #ffffff;
+    font-weight: bolder;
+}
+.myday-icon{
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+.myday-add-cover{
+    width: 100px;
+    height: 200px;
+    background-color: var(--soft-dark);
+    border-radius: 20px;
+  
+   
+}
+.myday-add{
+    width: 100px;
+    height: 200px;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content:flex-end;
+    align-items: center;
+    
+}
+.myday-add-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--soft-dark);
+    border-radius:50%;
+    margin-bottom: 10px;
+   
+}
+.myday-add-owner{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary);
+    border-radius:50%;
+ 
+}
+.myday-right-icon{
+    position: absolute;
+    right: 40px;
+    top: 80px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--soft-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.myday-right-icon:hover{
+    background-color:rgb(224, 223, 223);
+    color: black;
+}
+.feather-chevron-right{
+   
+}
+.scroll-element{
+   
+
+    
+    
+}
+/*-----------------------------add-post------------------ */
+.add-post{
+    margin:auto;
+    width: 500px;
+    background-color: var(--simidark);
+    margin-top: 20px;
+    padding:10px 10px;
+    border-radius: 10px;
+}
+.add-post-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.add-text-profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+}
+.text-box{
+   background-color:var(--soft-dark);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50px;
+   height: 40px;
+   margin-left: 10px;
+   padding: 10px 20px;
+  
+   
+   
+}
+.add-text{
+    background-color: var(--soft-dark);
+    border:none;
+    outline: none;
+    margin-left: 10px;
+    width: 350px;
+    
+   
+}
+.divider{
+    margin: 10px;
+    border-bottom: 2px solid var(--soft-dark);
+}
+.add-file{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.add-file div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.add-file div:hover{
+    background-color: var(--soft-dark);
+}
+.add-file .video i{
+    margin-right: 5px;
+    color:var(--danger);
+}
+.add-file .photo i {
+   
+    margin-right: 5px;
+    color:var(--success)
+}
+.add-file .emoji i{
+    margin-right: 5px;
+    color:var(--warning) ;
+}
+/* -----------------post-list---------------------------- */
+.post-list{
+    margin:auto;
+    width: 500px;
+    background-color: var(--simidark);
+    margin-top: 20px;
+    padding:10px 10px;
+    border-radius: 10px;
+
+}
+.post-list-box{
+    margin-top: 10px;
+}
+.post-bg{
+    
+}
+.space{
+    display: flex;
+    justify-content: space-between;
+}
+.post-item{
+    display: flex;
+    align-items: flex-start;
+   
+}
+.post-img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+
+}
+.post-text{
+    margin-top: 10px;
+}
+.link-text{
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.post-img-box{
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+}
+.text-caption{
+    font-size: 18px;
+}
+.box-img{
+    width: 280px;
+    height: 130px;
+}
+
+.box-img-one{
+    width: 216px;
+    height: 400px;
+    margin-right: 4px;
+}
+.baseline{  
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+.baseline div{
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.baseline .react i{
+    font-size: 18px;
+    
+}
+.baseline .comment i{
+    font-size: 18px;
+    
+}
+.baseline .share i{
+    font-size: 18px;
+    
+}
+.baseline div:hover{
+    background-color: var(--soft-dark);
+    border-radius: 5px;
+    
+}
+/*------------------center--side--------------------*/
+.right-side{
+    width: 25%;
+    margin-top:80px;
+    overflow-y:scroll;
+    height: 100vh;
+   
+    /* background-color: yellow; */
+}
+.right-side::-webkit-scrollbar{
+    width: 5px;
+}
+.right-side::-webkit-scrollbar-track{
+    border:7px solid #19191a;
+}
+.right-side::-webkit-scrollbar-thumb{
+    background-color:var(--soft-dark);
+    border: 1px solid var(--soft-dark);
+    border-radius: 10px;
+}
+.right-box{}
+.right-box-model{
+   width: 100%;
+}
+    
+.spon-bg{
+    width:300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.spon-bg:hover{
+    background-color: var(--simidark);
+    border-radius: 10px;
+}
+.img-spon{
+    border-radius: 10px;
+    width: 150px;
+    height: 80px;
+    margin-right: 20px;
+     
+}
+.right-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.dot{
+    width: 29px;
+    height: 29px;
+    /* padding: 1px; */
+    text-align: center;
+    border-radius: 50%;
+}
+.dot:hover{
+    background-color: var(--soft-dark);
+}
+.icon-menu{
+   margin-right: 10px;
+   
+}
+.contact{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.contact-cover{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2;
+}
+.contact-cover:hover{
+    background-color: var(--soft-dark);
+}
+.active{
+    
+}
+.active-box{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.active-box:hover{
+    background-color: var(--soft-dark);
+}
+
+
+.active-state:hover{
+    background-color: var(--soft-dark);
+}
+.active-color{
+    width: 10px;
+    height: 10px;
+    background-color:var(--success);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 50%;
+    
+}
+.active-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    
+}
+.active-text{
+    margin-left: 10px;
+}
